@@ -5,22 +5,28 @@
     <style>
       html{font-family:Arial;color:#333;}
       body{background:#999;margin:0;}
-      #container{width:1200px;margin:0 auto;background:#395480;}
+      #container{width:1200px;margin:0 auto;background:#97d7fc;}
       #header{width:100%;height:100px;border-bottom:1px solid #c7c7c7;margin:10px;}
       #logo{float:left;width:498px;height:223px;background:#666;border:1px solid #c7c7c7;margin:10px;}
-      #top_info{float:right;width:600px;height:60px;background:#14042e;border:5px solid #c7c9c7;margin:10px;font: 30px Arial, sans-serif;color: #fdfcff; }
+      #top_info{float:right;width:600px;height:60px;background:#14042e;border:5px solid #c7c9c7;margin:10px;font: 30px Arial, sans-serif;color: #fdfcff; text-align: center; padding-top: 20px;}
+      #logo2{float:right;width:600px;height:160px;background:#666;border:1px solid #c7c7c7;margin:10px;}
+      #answerbanner {background:#598bf0;height:30px;padding: 5px; clear:both;font:18px Arial; color:#fdfcff; text-align: center; padding-top: 0px;}
       #navbar{height:20px;clear:both}
       #navbar ul{margin:0;padding:0;list-style-type:none;}
       #navbar ul li{padding:10px;float:left;}
       #navbar ul li a{font-size:14px;float:left;padding:0 0 0 150px;display:block;}
-      #banner{background:#395480;height:120px;padding:20px;clear:both;font:18px Arial; color:#fdfcff; }
+      #banner{background:#598bf0;height:60px;padding:20px;clear:both;font:18px Arial; color:#fdfcff; text-align: center; padding-top: 40px;}
       #left_column{float:left;width:350px;height:200px;border:1px solid #333;color:#fff;background:#000;padding:20px;background-image: url("our_solar_system.jpg");background-size: 400px;}
       #right_column{float:right;width:350px;height:200px;border:1px solid #333;color:#fff;background:#000;padding:20px;background-image: url("expansion_of_universe.jpg");background-size: 400px;}
       #center {margin: auto;width:350px;height:200px;background:#000;color:#fff;border:1px solid #333;padding:20px;background-image: url("milky_way.gif");background-size: 400px;}
+      #linkbar{float:left;width: 498px; height:20px;clear:both}
+      #linkbar ul{margin:0;padding:0;list-style-type:none;}
+      #linkbar ul li{padding:10px;float:left;}
+      #linkbar ul li a{font-size:14px;float:left;padding:0 0 0 150px;display:block;}
       #footer{padding:20px;clear:both;}
     </style>
   </head>
-  <p></p>
+  
   <body>
     <!--CONTAINER-->
     <div id="container">
@@ -28,22 +34,45 @@
       <div id="header">
         <div id="logo"><IMG SRC="nebulae-astronomy.gif"></div>
         <div id="top_info">My Astronomy Home Page </div>
+        <div id="answerbanner">
+         <script>
+          var number;
+            number=prompt("Welcome to my Home Page - But before you get there, you have to answer a question. Do you know how many stars with planets are in our galaxy Milkyway ? Take a guess");
+          if((number < 3000) || (number >3500)){
+            document.write('<p class="style1">'+"Your answer: " +number+ " Unfortunately this is not correct. See details below"+'</p>');
+          }
+          else if ((number >= 3000) && (number <=3500)) {
+            document.write('<p class="style1">'+"Your answer: " +number+" You are good. See details below "+'</p>');}
+          console.log('somebody clicked');
+          </script>
+        </div>
         <div id="navbar">
           <ul>
-            <li><a href="https://coolcosmos.ipac.caltech.edu/ask/192-What-is-the-solar-system-#:~:text=The%20solar%20system%20is%20the,by%20the%20sun's%20strong%20gravity.">Planets</a></li>
-            <li><a href="https://www.nationalgeographic.com/science/article/stars#:~:text=Stars%20are%20huge%20celestial%20bodies,all%20light%2Dyears%20from%20Earth.">Stars</a></li>
-            <li><a href="https://science.nasa.gov/astrophysics/focus-areas/black-holes">Black holes</a></li>
-            <li><a href="https://science.nasa.gov/astrophysics/focus-areas/what-are-galaxies">Galaxies</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="stars.html">Stars</a></li>
+            <li><a href="galaxies.html">Galaxies</a></li>
           </ul>
+          <script src="index_java.js"></script>
+          <noscript>You need to enable JavaScript to view the full site.</noscript>
         </div>
       </div>
+        
       <!--CONTENT AREA-->
       <div id="content_area">
         <div id="banner">Astronomy studies objects and their phenomena in space. It is a natural science that uses mathematics, physics, and chemistry in order to explain their origin and evolution. There are many objects of interest. These include planets, moons, stars, nebulae, galaxies, and comets.</div>
-        <div id="left_column">Our Solar System contains 9 planets. The star of our solar system is the sun. The 9 planets are pulled by gravity to our sun and circle it. The planet closest to the sun is Mercury. Mercury is followed by Venus, then Earth, Mars, Jupiter, Saturn, Uranus, Neptun and the finally Pluto. Actually Pluto is officially only a dwarf planet  .</div>
+        <div id="left_column">Our Solar System contains 9 planets. The star of our solar system is the sun. The 9 planets are pulled by gravity to our sun and circle it. The planet closest to the sun is Mercury. Mercury is followed by Venus, then Earth, Mars, Jupiter, Saturn, Uranus, Neptun and the finally Pluto. Actually Pluto is officially only a dwarf planet.</div>
         <div id="right_column">Our Galaxy, the Milkyway, is a part of a very very large system called the Universe. The universe is more than 10 billion years old. It was created through the "Big Bang". The scientists will tell you that it was started through a singularity and quickly expanded and is still expanding. When we look in any direction we can see objects up to 46 billion light years away. Nobody knows how big the universe really is. There are also theories now which talk that there are multiple universes. It's called M-Theory.</div>
         <div id="center">Our solar system of the Milkyway galaxy. It's a spiral galaxy. It is centered around a large black hole that is currently asleep. So far, astronomars have found more than 3200 other stars with planets orbiting them in our galaxy. Overall, our galaxy has more than 100 thousand million stars. Our solar system is nearly on the edge of our galaxy. Astromers will tell you, that we are located on the 4th spiral arm.</div>
       </div>
+      <div id="linkbar">
+          <ul>
+            <br><li><a href="https://coolcosmos.ipac.caltech.edu/ask/192-What-is-the-solar-system-#:~:text=The%20solar%20system%20is%20the,by%20the%20sun's%20strong%20gravity.">External Links to Planets</a></li>
+            <br><br><li><a href="https://www.nationalgeographic.com/science/article/stars#:~:text=Stars%20are%20huge%20celestial%20bodies,all%20light%2Dyears%20from%20Earth.">External Link to Stars</a></li>
+            <br><br><li><a href="https://science.nasa.gov/astrophysics/focus-areas/black-holes">External Link to Black holes</a></li>
+            <br><br><li><a href="https://science.nasa.gov/astrophysics/focus-areas/what-are-galaxies">External Link to Galaxies</a></li>
+          </ul>
+        </div>
+        <div id="logo2"><IMG SRC="super_nova.jpg"></div>
       <!--FOOTER-->
       <div id="footer">This page belongs to Sparks5. The content should not be copied.</div>
     </div>
